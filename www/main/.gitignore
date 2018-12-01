@@ -1,0 +1,11 @@
+# phpstorm project files
+/.idea
+
+/vendor
+
+# other local folders
+/build
+/docs
+
+/node_modules
+npm-debug.log

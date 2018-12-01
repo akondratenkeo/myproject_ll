@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__.'/../vendor/autoload.php';
+
+$container = new \Core\Base\Application(
+    realpath(__DIR__ . '/../')
+);
+
+$container->bootstrapWith([
+    \Core\Base\Bootstrap\LoadEnvironment::class,
+    \Core\Base\Bootstrap\LoadConfiguration::class,
+    \Core\Base\Bootstrap\HandleExceptions::class,
+    \Core\Base\Bootstrap\RegisterLogger::class,
+    \Core\Base\Bootstrap\RegisterDatabase::class,
+]);
+
+$console = new Symfony\Component\Console\Application();
+
+$console->add(new \App\Frontend\Commands\SetUpCommand($container));
+$console->add(new \App\Frontend\Commands\SetDownCommand($container));
+
+$console->run();

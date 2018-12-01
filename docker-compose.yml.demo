@@ -1,0 +1,54 @@
+version: "3"
+services:
+
+  main-mysql:
+    build: docker/main-mysql
+    container_name: main_myproject_mysql
+    ports:
+      - "33060:3306"
+
+  main-nginx:
+    build: docker/main-nginx
+    container_name: main_myproject_nginx
+    working_dir: /var/www
+    volumes:
+      - ./www/main:/var/www
+    ports:
+      - "80:80"
+
+  main-php-fpm:
+    build: www/main
+    container_name: main_myproject_php_fpm
+    working_dir: /var/www
+    volumes:
+      - ./www/main:/var/www
+
+  service-mysql:
+    build: docker/service-mysql
+    container_name: service_myproject_mysql
+    ports:
+      - "33061:3306"
+
+  service-nginx:
+    build: docker/service-nginx
+    container_name: service_myproject_nginx
+    working_dir: /var/www
+    volumes:
+      - ./www/service:/var/www
+    ports:
+      - "8080:80"
+
+  service-php-fpm:
+    build: www/service
+    container_name: service_myproject_php_fpm
+    working_dir: /var/www
+    volumes:
+      - ./www/service:/var/www
+
+  service-redis:
+    image: redis:alpine
+    container_name: service_myproject_redis
+
+  shared-rebbitmq:
+    build: docker/shared-rebbitmq
+    container_name: shared_myproject_rebbitmq

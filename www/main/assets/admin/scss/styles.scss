@@ -1,0 +1,193 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Font Awesome
+@import "~font-awesome/scss/font-awesome";
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+.display-4 {
+  font-size: 2.5rem;
+}
+.flex-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+.h-250 {
+  height: 250px;
+}
+body {
+  height: 100vh;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.admin-header {
+  padding: .75rem 0;
+  line-height: 1;
+  background-color: #263238;
+
+  &-logo {
+    position: relative;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.25rem;
+    color: $light;
+    vertical-align: top;
+
+    .badge {
+      position: relative;
+      font-family: "Raleway", Georgia, serif;
+      font-size: .75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-left: .5rem;
+      color: $white;
+    }
+    &:hover {
+      color: $light;
+      text-decoration: none;
+    }
+  }
+}
+.admin-main {
+  flex: 1 0 auto;
+  padding: 2rem 0;
+
+  .content-main {
+    .action-header-block {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid $gray-300;
+
+      .action-header {
+
+      }
+    }
+    .action-menu-block {
+      margin-bottom: 1.5rem;
+    }
+  }
+  .content-sidebar {
+    padding-top: 3.5rem;
+
+    .stats-block {
+      position: relative;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+
+      .header {
+        padding: .25rem .5rem;
+        font-style: italic;
+        border-radius: .25rem;
+        background-color: $gray-200;
+      }
+      .info {
+        position: absolute;
+        top: .75rem;
+        right: 1rem;
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+        font-style: italic;
+        font-size: 3.5rem;
+        line-height: 1;
+      }
+    }
+  }
+}
+.article-item {
+  margin-bottom: 1rem;
+
+  &-title {
+    margin-bottom: .25rem;
+    font-size: 1.25rem;
+
+    a {
+      color: $dark;
+      font-weight: bold;
+
+      &:hover {
+        color: $dark;
+        text-decoration: underline;
+      }
+    }
+    .delete-button {
+      padding: 0.2rem 0.5rem;
+      font-size: 0.75rem;
+      font-weight: bold;
+      line-height: 1;
+      border-radius: 0.2rem;
+    }
+  }
+  &-meta {
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: $gray-500;
+
+    .author-info {
+      color: $gray-600;
+      text-decoration: underline;
+    }
+    .visited-info {
+      padding: .1rem .25rem;
+      margin-left: .5rem;
+      display: inline-block;
+      line-height: 1;
+      border: 1px solid $gray-300;
+      border-radius: .25rem;
+      color: $dark;
+
+      .fa {
+        margin-right: .3rem;
+      }
+    }
+  }
+}
+.articles-pagination {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  > .btn {
+    border-radius: 2rem;
+  }
+}
+.admin-footer {
+  padding: 2.5rem 0;
+  color: $gray-700;
+  text-align: center;
+  background-color: $gray-200;
+  border-top: .05rem solid $gray-300;
+
+  p {
+    margin-bottom: 0;
+
+    .author-sign {
+      color: $primary
+    }
+  }
+}
+
+@media (min-width: 40em) {
+  .blog-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+  .h-md-250 {
+    height: 250px;
+  }
+}
