@@ -44,11 +44,11 @@
     "scripts": {
         "set-up": [
             "php bin/console app:set-up",
-            "ln -s ./var/storage ./public/images/storage"
+            "chown -R www-data:www-data /var/www/public/images/storage"
         ],
         "set-down": [
             "php bin/console app:set-down",
-            "rm -rf ./var/storage/*"
+            "rm -rf /var/www/public/images/storage/*"
         ]
     }
 }

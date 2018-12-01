@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
 
     protected const N_AUTHORS = 5000;
 
-    protected const N_ARTICLES = 500000;
+    protected const N_ARTICLES = 5000;
 
     /**
      * @var int
@@ -64,7 +64,7 @@ class DatabaseSeeder extends Seeder
         }
 
         $image = $this->faker->image(
-            $this->container['path.var'].DIRECTORY_SEPARATOR.'storage',
+            $this->container['path.public'].DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR.'storage',
             1110,
             420,
             'cats',
