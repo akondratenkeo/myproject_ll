@@ -12,7 +12,7 @@ services:
     container_name: main_myproject_nginx
     working_dir: /var/www
     volumes:
-      - ./www/main:/var/www
+      - main-volume:/var/www
     ports:
       - "80:80"
 
@@ -21,20 +21,20 @@ services:
     container_name: main_myproject_php_fpm
     working_dir: /var/www
     volumes:
-      - ./www/main:/var/www
+      - main-volume:/var/www
 
   service-mysql:
-    build: docker/service-mysql
+    image: alexkwellbe/service-mysql:latest
     container_name: service_myproject_mysql
     ports:
       - "33061:3306"
 
   service-nginx:
-    build: docker/service-nginx
+    image: alexkwellbe/service-nginx:latest
     container_name: service_myproject_nginx
     working_dir: /var/www
     volumes:
-      - ./www/service:/var/www
+      - service-volume:/var/www
     ports:
       - "8080:80"
 
@@ -43,10 +43,10 @@ services:
     container_name: service_myproject_php_fpm
     working_dir: /var/www
     volumes:
-      - ./www/service:/var/www
+      - service-volume:/var/www
 
   service-nodejs:
-    build: docker/service-nodejs
+    image: alexkwellbe/service-nodejs:latest
     container_name: service_myproject_nodejs
     working_dir: /var/www
     command: laravel-echo-server start
@@ -60,5 +60,9 @@ services:
     container_name: service_myproject_redis
 
   shared-rebbitmq:
-    build: docker/shared-rebbitmq
+    image: alexkwellbe/shared-rebbitmq:latest
     container_name: shared_myproject_rebbitmq
+
+volumes:
+  main-volume:
+  service-volume:

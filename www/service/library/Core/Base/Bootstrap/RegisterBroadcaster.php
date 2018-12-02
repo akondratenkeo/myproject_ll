@@ -3,17 +3,18 @@
 namespace Core\Base\Bootstrap;
 
 use Core\Base\Application;
+use Core\Broadcasting\RedisBroadcaster;
 use Predis\Client as Redis;
 
-class RegisterRedis implements BootstrapperInterface
+class RegisterBroadcaster implements BootstrapperInterface
 {
     /**
      * @param \Core\Base\Application $app
      */
     public function bootstrap(Application $app): void
     {
-        $app->singleton(Redis::class, function() use ($app) {
-            return new Redis($app['config']->get('redis'));
+        $app->bind(RedisBroadcaster::class, function() use ($app) {
+            return new RedisBroadcaster($app->make(Redis::class));
         });
     }
 }
