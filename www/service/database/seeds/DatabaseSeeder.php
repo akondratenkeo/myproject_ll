@@ -43,79 +43,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run() : void
     {
-        Capsule::table('topics')->insert($this->generateTopics(self::N_TOPICS));
+        sleep(2);
 
-        $i = self::N_AUTHORS;
-        while ($i > 0) {
-            $step = ($i < $this->batchStep) ? $i : $this->batchStep;
-
-            if (Capsule::table('authors')->insert($this->generateAuthors($step))) {
-                $i -= $step;
-            }
-        }
-
-        $i = self::N_ARTICLES;
+        /*$i = self::N_ARTICLES;
         while ($i > 0) {
             $step = ($i < $this->batchStep) ? $i : $this->batchStep;
 
             if (Capsule::table('articles')->insert($this->generateArticles($step, self::N_TOPICS, self::N_AUTHORS))) {
                 $i -= $step;
             }
-        }
-
-        $image = $this->faker->image(
-            $this->container['path.var'].DIRECTORY_SEPARATOR.'storage',
-            1110,
-            420,
-            'cats',
-            false
-        );
-
-        $i = 1;
-        while ($i <= self::N_ARTICLES) {
-
-            if (Capsule::table('images')->insert($this->generateImages($image, $i, $this->batchStep))) {
-                $i += $this->batchStep;
-            }
-        }
-    }
-
-    /**
-     * @param int $limit
-     *
-     * @return array
-     */
-    protected function &generateTopics(int $limit) : array
-    {
-        $topics = [];
-
-        for ($i = 0; $i < $limit; $i++) {
-            $topics[$i] = [
-                'title' => $this->faker->unique()->streetName,
-                'created_at' => $this->faker->dateTimeInInterval($startDate = '-4 years', $interval = '-2 years'),
-            ];
-        }
-
-        return $topics;
-    }
-
-    /**
-     * @param int $limit
-     *
-     * @return array
-     */
-    protected function &generateAuthors(int $limit) : array
-    {
-        $authors = [];
-
-        for ($i = 0; $i < $limit; $i++) {
-            $authors[$i] = [
-                'name' => $this->faker->unique()->name,
-                'created_at' =>  $this->faker->dateTimeInInterval($startDate = '-4 years', $interval = '-2 years'),
-            ];
-        }
-
-        return $authors;
+        }*/
     }
 
     /**
@@ -157,19 +94,5 @@ class DatabaseSeeder extends Seeder
         }
 
         return $articles;
-    }
-
-    protected function &generateImages(string $image, int $offset, int $limit) : array
-    {
-        $images = [];
-
-        for ($i = 0; $i < $limit; $i++) {
-            $images[$i] = [
-                'article_id' => $offset + $i,
-                'filename' => $image,
-            ];
-        }
-
-        return $images;
     }
 }

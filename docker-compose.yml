@@ -45,6 +45,16 @@ services:
     volumes:
       - ./www/service:/var/www
 
+  service-nodejs:
+    build: docker/service-nodejs
+    container_name: service_myproject_nodejs
+    working_dir: /var/www
+    command: laravel-echo-server start
+    ports:
+      - "6001:6001"
+    depends_on:
+      - service-redis
+
   service-redis:
     image: redis:alpine
     container_name: service_myproject_redis

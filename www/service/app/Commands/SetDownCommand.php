@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Frontend\Commands;
+namespace App\Commands;
 
 use Core\Base\Application;
 use Core\Database\Migrator;

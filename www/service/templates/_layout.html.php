@@ -7,6 +7,7 @@
     <link rel="icon" href="/favicon.ico">
 
     <title><?php $view['slots']->output('title', '') ?></title>
+    <script src="//service.myproject.ll:6001/socket.io/socket.io.js"></script>
 
     <link href="/css/styles.css" rel="stylesheet">
 </head>
@@ -26,13 +27,7 @@
     <main class="frontend-main">
         <div class="container">
             <div class="row">
-                <div class="col-12 home-bg-container">
-                    <?php $view['slots']->output('bg-container-content') ?>
-                </div>
                 <div class="col-12 col-lg-8 content-main">
-                    <div class="action-header-block">
-                        <h1 class="action-header"><?php $view['slots']->output('action-header', '') ?></h1>
-                    </div>
                     <div class="action-menu-block">
                         <?php $view['slots']->output('action-menu', '') ?>
                     </div>

@@ -31,6 +31,7 @@ class Kernel implements HttpKernelInterface
         \Core\Base\Bootstrap\HandleExceptions::class,
         \Core\Base\Bootstrap\RegisterLogger::class,
         \Core\Base\Bootstrap\RegisterDatabase::class,
+        \Core\Base\Bootstrap\RegisterRedis::class,
         \Core\Base\Bootstrap\RegisterView::class,
     ];
 

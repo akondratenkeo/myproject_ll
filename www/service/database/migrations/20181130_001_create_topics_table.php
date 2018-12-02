@@ -7,18 +7,18 @@ class CreateTopicsTable extends Migration
 {
     public function up()
     {
-        Capsule::schema()->create('topics', function ($table) {
-            $table->increments('id');
+        Capsule::schema()->create('articles_top_visited', function ($table) {
+            $table->unsignedInteger('id');
             $table->string('title', 128);
-            $table->timestamp('created_at')
-                ->nullable();
+            $table->unsignedInteger('topic_id');
+            $table->unsignedInteger('visited');
 
-            $table->index('title');
+            $table->index(['topic_id', 'visited'], 'topic_visited_idx');
         });
     }
 
     public function down()
     {
-        Capsule::schema()->dropIfExists('topics');
+        Capsule::schema()->dropIfExists('articles_top_visited');
     }
 }

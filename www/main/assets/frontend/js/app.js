@@ -20,3 +20,8 @@ const app = new Vue({
         };
     }
 });
+
+Echo.channel('test')
+    .listen('.zzz', () => {
+        console.log('wwwwwww');
+    });

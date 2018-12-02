@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Frontend\Controllers;
+namespace App\Controllers;
 
-use App\Frontend\Models\Article;
-use App\Frontend\Models\User;
+use App\Models\Article;
 use Core\Http\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -11,8 +10,14 @@ class IndexController extends AbstractController
 {
     public function index(Article $article)
     {
-        return $this->view('frontend/home.html.php', [
-            'articles' => $article->getArticlesList(30)
-        ]);
+        $redis = $this->container->make('redis');
+
+        var_dump($redis->publish('test', json_encode([
+            'event' => 'zzz',
+            'data' => ['a' => 1],
+            'socket' => 'socket',
+        ])));
+
+        return $this->view("home.html.php");
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Frontend\Listeners;
+namespace App\Listeners;
 
 use Core\Events\RequestCaptured;
 

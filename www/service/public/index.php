@@ -6,7 +6,7 @@ $app = new \Core\Base\Application(
     realpath(__DIR__ . '/../')
 );
 
-$app->loadRoutes($app->configPath() .'/routes/frontend.php');
+$app->loadRoutes($app->configPath() .'/routes/web.php');
 
 //$app->on(
 //    \Core\Events\RequestCaptured::class,
@@ -20,8 +20,3 @@ $response = $kernel->handle(
 );
 
 $response->send();
-
-/*
-- Пагинация
-- Развернуть сервис
-*/
