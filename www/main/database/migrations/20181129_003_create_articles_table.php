@@ -23,6 +23,7 @@ class CreateArticlesTable extends Migration
             $table->foreign('author_id')->references('id')->on('authors')
                 ->onUpdate('cascade')->onDelete('cascade');
 
+            $table->index('created_at', 'created_at_idx');
             $table->index('visited', 'visited_idx');
         });
     }

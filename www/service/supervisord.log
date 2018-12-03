@@ -125,3 +125,24 @@
 2018-12-03 10:19:30,402 INFO success: initial-sync-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2018-12-03 10:19:30,402 INFO success: update-top-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2018-12-03 11:19:46,937 INFO exited: initial-sync-worker_00 (exit status 0; expected)
+2018-12-03 14:43:10,494 INFO exited: update-top-worker_00 (exit status 255; not expected)
+2018-12-03 14:43:11,497 INFO spawned: 'update-top-worker_00' with pid 79
+2018-12-03 14:43:11,600 INFO exited: update-top-worker_00 (exit status 255; not expected)
+2018-12-03 14:43:12,604 INFO spawned: 'update-top-worker_00' with pid 86
+2018-12-03 14:43:12,706 INFO exited: update-top-worker_00 (exit status 255; not expected)
+2018-12-03 14:43:14,710 INFO spawned: 'update-top-worker_00' with pid 93
+2018-12-03 14:43:15,152 INFO exited: update-top-worker_00 (exit status 255; not expected)
+2018-12-03 14:43:18,158 INFO spawned: 'update-top-worker_00' with pid 100
+2018-12-03 14:43:18,563 INFO exited: update-top-worker_00 (exit status 255; not expected)
+2018-12-03 14:43:19,564 INFO gave up: update-top-worker_00 entered FATAL state, too many start retries too quickly
+2018-12-03 14:47:42,150 CRIT Supervisor running as root (no user in config file)
+2018-12-03 14:47:42,150 INFO Included extra file "/etc/supervisor/conf.d/service.workers.conf" during parsing
+2018-12-03 14:47:42,151 INFO supervisord started with pid 46
+2018-12-03 14:47:43,154 INFO spawned: 'initial-sync-worker_00' with pid 56
+2018-12-03 14:47:43,158 INFO spawned: 'update-top-worker_00' with pid 57
+2018-12-03 14:47:44,293 INFO success: initial-sync-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 14:47:44,293 INFO success: update-top-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 15:01:48,836 WARN received SIGINT indicating exit request
+2018-12-03 15:01:48,858 INFO waiting for initial-sync-worker_00, update-top-worker_00 to die
+2018-12-03 15:01:48,866 INFO stopped: update-top-worker_00 (terminated by SIGTERM)
+2018-12-03 15:01:48,869 INFO stopped: initial-sync-worker_00 (terminated by SIGTERM)
