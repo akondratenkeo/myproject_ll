@@ -19,7 +19,7 @@ class ArticlesController extends AbstractController
         }
 
         if ($article->incrementVisited()) {
-            $service->publish($article->toArray(), 'article.updated');
+            $service->publish($article->getQueuedPayload(), 'article.updated');
         }
 
         return $this->view('frontend/articles/show.html.php', [

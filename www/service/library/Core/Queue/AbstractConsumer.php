@@ -6,24 +6,10 @@ use PhpAmqpLib\Message\AMQPMessage;
 
 abstract class AbstractConsumer extends AbstractAMQP implements ConsumerInterface
 {
-    protected $deliveryMode = 2;
-
-    /**
-     * @param $deliveryMode
-     *
-     * @return self
-     */
-    public function setDeliveryMode($deliveryMode) : self
-    {
-        $this->deliveryMode = $deliveryMode;
-
-        return $this;
-    }
-
     /**
      * {@inheritdoc}
      */
-    public function execute(AMQPMessage $message) : void
+    public function execute() : void
     {
         $this->getChannel()->basic_qos(null, 1, null);
         $this->getChannel()->basic_consume($this->queueName, '', false, false, false, false, [$this, 'callback']);
@@ -53,19 +39,12 @@ abstract class AbstractConsumer extends AbstractAMQP implements ConsumerInterfac
     }
 
     /**
+     * @param $message
+     *
      * @return array
      */
-    protected function getBasicProperties() : array
+    protected function parseMessage($message) : array
     {
-        return ['delivery_mode' => $this->deliveryMode];
-    }
-
-    /**
-     * @param $message
-     * @return string
-     */
-    protected function prepareMessage($message) : string
-    {
-        return (string) (! is_scalar($message)) ? json_encode($message) : $message;
+        return json_decode($message, true);
     }
 }

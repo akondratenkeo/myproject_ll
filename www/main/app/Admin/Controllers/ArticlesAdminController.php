@@ -71,7 +71,7 @@ class ArticlesAdminController extends AbstractController
         }
 
         if ($article->resetVisited()) {
-            $service->publish($article->toArray(), 'article.updated');
+            $service->publish($article->getQueuedPayload(), 'article.updated');
         }
 
         return new RedirectResponse("/article/{$article->id}", 301);

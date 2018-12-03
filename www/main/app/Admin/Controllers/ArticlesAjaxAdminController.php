@@ -29,7 +29,7 @@ class ArticlesAjaxAdminController extends AbstractController
             ]);
         };
 
-        $service->publish(['article_id' => $article_id], 'article.removed');
+        $service->publish(['id' => $article_id], 'article.removed');
 
         return json_encode([
             'status'=> 'OK'

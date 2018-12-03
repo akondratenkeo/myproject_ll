@@ -23,5 +23,7 @@ $console = new Symfony\Component\Console\Application();
 
 $console->add(new \App\Commands\SetUpCommand($container));
 $console->add(new \App\Commands\SetDownCommand($container));
+$console->add(new \App\Commands\UpdateTopCommand($container));
+$console->add(new \App\Commands\InitialSyncCommand($container));
 
 $console->run();

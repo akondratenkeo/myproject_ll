@@ -50,6 +50,8 @@ services:
     working_dir: /var/www
     volumes:
       - service-volume:/var/www
+    depends_on:
+      - shared-rebbitmq
 
   service-nodejs:
     image: alexkwellbe/service-nodejs:latest

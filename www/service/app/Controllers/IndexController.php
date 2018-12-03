@@ -2,16 +2,12 @@
 
 namespace App\Controllers;
 
-use Core\Broadcasting\RedisBroadcaster;
 use Core\Http\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 
 class IndexController extends AbstractController
 {
-    public function index(RedisBroadcaster $broadcaster)
+    public function index()
     {
-        $broadcaster->broadcast(['article-top-801'], 'visited-changed', ['a' => 100]);
-
         return $this->view("home.html.php");
     }
 }

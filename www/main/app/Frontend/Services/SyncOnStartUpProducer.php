@@ -19,7 +19,7 @@ class SyncOnStartUpProducer
     {
         $this->producer = $producer->setRoutingKey($this->queueName)
             ->exchangeDeclare($this->exchangeName, 'direct')
-            ->queueDeclare($this->queueName);
+            ->queueDeclare($this->queueName, [$this->queueName]);
 
         $this->articleModel = $articleModel;
     }
@@ -38,7 +38,7 @@ class SyncOnStartUpProducer
                 ->get();
 
             if ($articles !== null && count($articles)) {
-                $this->producer->publish($articles->toArray());
+                $this->producer->publish($articles->toArray(), $this->queueName);
             }
 
             $last_id += 500;

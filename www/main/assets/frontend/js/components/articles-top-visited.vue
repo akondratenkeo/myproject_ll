@@ -165,7 +165,7 @@
 
         computed: {
             channelName() {
-                return `article-top-${this.articleId}`;
+                return `topic-top-${this.topicId}`;
             }
         },
 

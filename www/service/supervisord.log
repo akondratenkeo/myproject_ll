@@ -1,0 +1,126 @@
+2018-12-03 09:12:04,095 CRIT Supervisor running as root (no user in config file)
+2018-12-03 09:12:04,095 INFO Included extra file "/etc/supervisor/conf.d/service.workers.conf" during parsing
+2018-12-03 09:12:04,096 INFO supervisord started with pid 1
+2018-12-03 09:12:05,098 INFO spawned: 'initial-sync-worker_00' with pid 10
+2018-12-03 09:12:05,099 INFO spawned: 'update-top-worker_00' with pid 11
+2018-12-03 09:12:05,706 INFO exited: initial-sync-worker_00 (exit status 1; not expected)
+2018-12-03 09:12:05,706 INFO exited: update-top-worker_00 (exit status 1; not expected)
+2018-12-03 09:12:06,708 INFO spawned: 'initial-sync-worker_00' with pid 24
+2018-12-03 09:12:06,709 INFO spawned: 'update-top-worker_00' with pid 25
+2018-12-03 09:12:06,765 INFO exited: initial-sync-worker_00 (exit status 1; not expected)
+2018-12-03 09:12:06,765 INFO exited: update-top-worker_00 (exit status 1; not expected)
+2018-12-03 09:12:08,770 INFO spawned: 'initial-sync-worker_00' with pid 38
+2018-12-03 09:12:08,773 INFO spawned: 'update-top-worker_00' with pid 39
+2018-12-03 09:12:09,902 INFO success: initial-sync-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 09:12:09,903 INFO success: update-top-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 09:21:59,699 WARN received SIGTERM indicating exit request
+2018-12-03 09:21:59,700 INFO waiting for initial-sync-worker_00, update-top-worker_00 to die
+2018-12-03 09:21:59,702 INFO stopped: update-top-worker_00 (terminated by SIGTERM)
+2018-12-03 09:21:59,704 INFO stopped: initial-sync-worker_00 (terminated by SIGTERM)
+2018-12-03 09:24:28,593 CRIT Supervisor running as root (no user in config file)
+2018-12-03 09:24:28,593 INFO Included extra file "/etc/supervisor/conf.d/service.workers.conf" during parsing
+2018-12-03 09:24:28,594 INFO supervisord started with pid 1
+2018-12-03 09:24:29,598 INFO spawned: 'initial-sync-worker_00' with pid 11
+2018-12-03 09:24:29,601 INFO spawned: 'update-top-worker_00' with pid 12
+2018-12-03 09:24:30,603 INFO success: initial-sync-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 09:24:30,604 INFO success: update-top-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 09:24:30,690 INFO exited: update-top-worker_00 (exit status 1; not expected)
+2018-12-03 09:24:30,690 INFO exited: initial-sync-worker_00 (exit status 1; not expected)
+2018-12-03 09:24:30,691 INFO spawned: 'update-top-worker_00' with pid 25
+2018-12-03 09:24:30,741 INFO exited: update-top-worker_00 (exit status 1; not expected)
+2018-12-03 09:24:31,742 INFO spawned: 'update-top-worker_00' with pid 32
+2018-12-03 09:24:31,793 INFO exited: update-top-worker_00 (exit status 1; not expected)
+2018-12-03 09:24:33,796 INFO spawned: 'update-top-worker_00' with pid 39
+2018-12-03 09:24:33,855 INFO exited: update-top-worker_00 (exit status 1; not expected)
+2018-12-03 09:24:36,859 INFO spawned: 'update-top-worker_00' with pid 46
+2018-12-03 09:24:36,907 INFO exited: update-top-worker_00 (exit status 1; not expected)
+2018-12-03 09:24:37,908 INFO gave up: update-top-worker_00 entered FATAL state, too many start retries too quickly
+2018-12-03 09:27:07,101 WARN received SIGTERM indicating exit request
+2018-12-03 09:27:13,145 CRIT Supervisor running as root (no user in config file)
+2018-12-03 09:27:13,145 INFO Included extra file "/etc/supervisor/conf.d/service.workers.conf" during parsing
+2018-12-03 09:27:13,146 INFO supervisord started with pid 1
+2018-12-03 09:27:14,149 INFO spawned: 'initial-sync-worker_00' with pid 10
+2018-12-03 09:27:14,153 INFO spawned: 'update-top-worker_00' with pid 11
+2018-12-03 09:27:15,356 INFO success: initial-sync-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 09:27:15,356 INFO success: update-top-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 09:29:35,062 WARN received SIGTERM indicating exit request
+2018-12-03 09:29:35,063 INFO waiting for initial-sync-worker_00, update-top-worker_00 to die
+2018-12-03 09:29:35,064 INFO stopped: update-top-worker_00 (terminated by SIGTERM)
+2018-12-03 09:29:35,066 INFO stopped: initial-sync-worker_00 (terminated by SIGTERM)
+2018-12-03 09:30:19,564 CRIT Supervisor running as root (no user in config file)
+2018-12-03 09:30:19,564 INFO Included extra file "/etc/supervisor/conf.d/service.workers.conf" during parsing
+2018-12-03 09:30:19,565 INFO supervisord started with pid 1
+2018-12-03 09:30:20,566 INFO spawned: 'initial-sync-worker_00' with pid 11
+2018-12-03 09:30:20,567 INFO spawned: 'update-top-worker_00' with pid 12
+2018-12-03 09:30:20,616 INFO exited: initial-sync-worker_00 (exit status 1; not expected)
+2018-12-03 09:30:20,622 INFO exited: update-top-worker_00 (exit status 1; not expected)
+2018-12-03 09:30:21,624 INFO spawned: 'initial-sync-worker_00' with pid 25
+2018-12-03 09:30:21,625 INFO spawned: 'update-top-worker_00' with pid 26
+2018-12-03 09:30:21,674 INFO exited: update-top-worker_00 (exit status 1; not expected)
+2018-12-03 09:30:21,675 INFO exited: initial-sync-worker_00 (exit status 1; not expected)
+2018-12-03 09:30:23,679 INFO spawned: 'initial-sync-worker_00' with pid 39
+2018-12-03 09:30:23,682 INFO spawned: 'update-top-worker_00' with pid 40
+2018-12-03 09:30:24,866 INFO success: initial-sync-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 09:30:24,866 INFO success: update-top-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 09:34:32,938 WARN received SIGTERM indicating exit request
+2018-12-03 09:34:32,939 INFO waiting for initial-sync-worker_00, update-top-worker_00 to die
+2018-12-03 09:34:32,940 INFO stopped: update-top-worker_00 (terminated by SIGTERM)
+2018-12-03 09:34:32,942 INFO stopped: initial-sync-worker_00 (terminated by SIGTERM)
+2018-12-03 10:00:29,280 CRIT Supervisor running as root (no user in config file)
+2018-12-03 10:00:29,280 INFO Included extra file "/etc/supervisor/conf.d/service.workers.conf" during parsing
+2018-12-03 10:00:29,281 INFO supervisord started with pid 1
+2018-12-03 10:00:30,284 INFO spawned: 'initial-sync-worker_00' with pid 10
+2018-12-03 10:00:30,286 INFO spawned: 'update-top-worker_00' with pid 11
+2018-12-03 10:00:31,287 INFO success: initial-sync-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 10:00:31,287 INFO success: update-top-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 10:00:31,926 INFO exited: update-top-worker_00 (exit status 1; not expected)
+2018-12-03 10:00:31,926 INFO exited: initial-sync-worker_00 (exit status 1; not expected)
+2018-12-03 10:00:32,929 INFO spawned: 'update-top-worker_00' with pid 24
+2018-12-03 10:00:33,007 INFO exited: update-top-worker_00 (exit status 1; not expected)
+2018-12-03 10:00:34,009 INFO spawned: 'update-top-worker_00' with pid 31
+2018-12-03 10:00:34,059 INFO exited: update-top-worker_00 (exit status 1; not expected)
+2018-12-03 10:00:36,063 INFO spawned: 'update-top-worker_00' with pid 38
+2018-12-03 10:00:36,125 INFO exited: update-top-worker_00 (exit status 1; not expected)
+2018-12-03 10:00:39,129 INFO spawned: 'update-top-worker_00' with pid 45
+2018-12-03 10:00:40,324 INFO success: update-top-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 10:03:13,467 WARN received SIGTERM indicating exit request
+2018-12-03 10:03:13,467 INFO waiting for update-top-worker_00 to die
+2018-12-03 10:03:13,469 INFO stopped: update-top-worker_00 (terminated by SIGTERM)
+2018-12-03 10:11:10,342 CRIT Supervisor running as root (no user in config file)
+2018-12-03 10:11:10,342 INFO Included extra file "/etc/supervisor/conf.d/service.workers.conf" during parsing
+2018-12-03 10:11:10,343 INFO supervisord started with pid 14
+2018-12-03 10:11:11,347 INFO spawned: 'initial-sync-worker_00' with pid 24
+2018-12-03 10:11:11,350 INFO spawned: 'update-top-worker_00' with pid 25
+2018-12-03 10:11:11,906 INFO exited: initial-sync-worker_00 (exit status 255; not expected)
+2018-12-03 10:11:12,909 INFO spawned: 'initial-sync-worker_00' with pid 38
+2018-12-03 10:11:12,910 INFO success: update-top-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 10:11:13,078 INFO exited: initial-sync-worker_00 (exit status 255; not expected)
+2018-12-03 10:11:15,082 INFO spawned: 'initial-sync-worker_00' with pid 45
+2018-12-03 10:11:15,218 INFO exited: initial-sync-worker_00 (exit status 255; not expected)
+2018-12-03 10:11:18,222 INFO spawned: 'initial-sync-worker_00' with pid 52
+2018-12-03 10:11:18,357 INFO exited: initial-sync-worker_00 (exit status 255; not expected)
+2018-12-03 10:11:19,358 INFO gave up: initial-sync-worker_00 entered FATAL state, too many start retries too quickly
+2018-12-03 10:12:35,878 WARN received SIGINT indicating exit request
+2018-12-03 10:12:35,879 INFO waiting for update-top-worker_00 to die
+2018-12-03 10:12:35,883 INFO stopped: update-top-worker_00 (terminated by SIGTERM)
+2018-12-03 10:14:59,694 CRIT Supervisor running as root (no user in config file)
+2018-12-03 10:14:59,694 INFO Included extra file "/etc/supervisor/conf.d/service.workers.conf" during parsing
+2018-12-03 10:14:59,695 INFO supervisord started with pid 59
+2018-12-03 10:15:00,697 INFO spawned: 'initial-sync-worker_00' with pid 68
+2018-12-03 10:15:00,697 INFO spawned: 'update-top-worker_00' with pid 69
+2018-12-03 10:15:00,847 INFO exited: initial-sync-worker_00 (exit status 255; not expected)
+2018-12-03 10:15:01,849 INFO spawned: 'initial-sync-worker_00' with pid 82
+2018-12-03 10:15:01,849 INFO success: update-top-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 10:15:01,983 INFO exited: initial-sync-worker_00 (exit status 255; not expected)
+2018-12-03 10:15:03,988 INFO spawned: 'initial-sync-worker_00' with pid 89
+2018-12-03 10:15:04,159 INFO exited: initial-sync-worker_00 (exit status 255; not expected)
+2018-12-03 10:15:07,165 INFO spawned: 'initial-sync-worker_00' with pid 96
+2018-12-03 10:15:07,334 INFO exited: initial-sync-worker_00 (exit status 255; not expected)
+2018-12-03 10:15:08,335 INFO gave up: initial-sync-worker_00 entered FATAL state, too many start retries too quickly
+2018-12-03 10:19:28,205 CRIT Supervisor running as root (no user in config file)
+2018-12-03 10:19:28,205 INFO Included extra file "/etc/supervisor/conf.d/service.workers.conf" during parsing
+2018-12-03 10:19:28,206 INFO supervisord started with pid 45
+2018-12-03 10:19:29,210 INFO spawned: 'initial-sync-worker_00' with pid 54
+2018-12-03 10:19:29,213 INFO spawned: 'update-top-worker_00' with pid 55
+2018-12-03 10:19:30,402 INFO success: initial-sync-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 10:19:30,402 INFO success: update-top-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

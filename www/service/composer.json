@@ -49,6 +49,9 @@
         ],
         "set-down": [
             "php bin/console app:set-down"
+        ],
+        "update-top": [
+            "php bin/console app:update-top"
         ]
     }
 }

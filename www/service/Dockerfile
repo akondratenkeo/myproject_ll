@@ -26,3 +26,14 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x -o /var/tmp/nodesource_setup.
 COPY .docker/php.ini.overrides.ini /etc/php/7.2/fpm/conf.d/99-overrides.ini
 
 COPY / /var/www
+
+# supervisor installation &&
+# create directory for child images to store configuration in
+RUN apt-get update \
+    && apt-get -y install supervisor \
+    && mkdir -p /var/log/supervisor \
+    && mkdir -p /etc/supervisor/conf.d
+
+# supervisor base configuration
+COPY .docker/supervisor/supervisor.conf /etc/supervisor.conf
+COPY .docker/supervisor/service.workers.conf /etc/supervisor/conf.d/service.workers.conf

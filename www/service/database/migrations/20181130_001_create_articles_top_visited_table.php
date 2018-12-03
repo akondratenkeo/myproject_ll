@@ -13,6 +13,7 @@ class CreateArticlesTopVisitedTable extends Migration
             $table->unsignedInteger('topic_id');
             $table->unsignedInteger('visited');
 
+            $table->primary('id');
             $table->index(['topic_id', 'visited'], 'topic_visited_idx');
         });
     }

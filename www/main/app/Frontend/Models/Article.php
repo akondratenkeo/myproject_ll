@@ -26,6 +26,16 @@ class Article extends Model
         return $this->visited;
     }
 
+    public function getQueuedPayload()
+    {
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'topic_id' => $this->topic_id,
+            'visited' => $this->visited
+        ];
+    }
+
     public function getArticlesData(int $id)
     {
         return $this->select('articles.*', 'authors.name as author_name', 'topics.title as topic_title', 'images.filename as image_filename')

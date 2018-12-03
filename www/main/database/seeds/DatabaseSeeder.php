@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
 
     protected const N_AUTHORS = 5000;
 
-    protected const N_ARTICLES = 5000;
+    protected const N_ARTICLES = 500000;
 
     /**
      * @var int
