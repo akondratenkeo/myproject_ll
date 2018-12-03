@@ -55,6 +55,21 @@ class Article extends Model
                     ->get();
     }
 
+    public function getArticlesListByDate(int $limit = 30)
+    {
+        return $this->select('title')
+            ->orderBy('created_at', 'DESC')
+            ->limit($limit)
+            ->get();
+    }
+
+    public function getCountInTopic()
+    {
+        return $this->selectRaw('topic_id, COUNT(id) as count_in')
+                    ->groupBy('topic_id')
+                    ->get();
+    }
+
     public function incrementVisited()
     {
         $this->visited += 1;

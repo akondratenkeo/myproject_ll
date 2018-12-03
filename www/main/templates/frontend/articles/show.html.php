@@ -36,7 +36,9 @@
                     <?= "by <span class=\"author-info\">{$article->author_name}</span><span class=\"visited-info\"><i class=\"fa fa-eye\"></i>{$article->visited}</span>"; ?>
                 </p>
                 <p class="article-item-image">
-                    <img src="/images/storage/<?= $article->image_filename; ?>" class="img-fluid" alt="">
+                    <?php if (! empty($article->image_filename)) : ?>
+                        <img src="/images/storage/<?= $article->image_filename; ?>" class="img-fluid" alt="">
+                    <?php endif; ?>
                 </p>
                 <p class="article-item-description">
                     <?= $view->escape($article->body); ?>

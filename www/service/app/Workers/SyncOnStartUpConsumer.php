@@ -24,21 +24,6 @@ class SyncOnStartUpConsumer extends AbstractConsumer
             ->queueDeclare($this->queueName, [$this->queueName]);
     }
 
-    public function execute() : void
-    {
-        $this->getChannel()->basic_qos(null, 1, null);
-        $this->getChannel()->basic_consume($this->queueName, '', false, false, false, false, [$this, 'callback']);
-
-        try {
-            while (count($this->getChannel()->callbacks)) {
-                $this->getChannel()->wait(null, false, 3600);
-            }
-        } catch(AMQPTimeoutException $e) {
-            //catch timeout exception
-        }
-    }
-
-
     /**
      * @param AMQPMessage $message
      *

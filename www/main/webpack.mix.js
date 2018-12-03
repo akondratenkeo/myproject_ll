@@ -2,8 +2,7 @@ const mix = require('laravel-mix');
 
 mix.setPublicPath(path.normalize('public/'));
 
-mix.sourceMaps()
-    .options({
+mix.options({
         processCssUrls: false
     });
 

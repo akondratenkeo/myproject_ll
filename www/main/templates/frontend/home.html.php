@@ -18,32 +18,31 @@
             <footer class="blockquote-footer"><i>My name is Aleksandr Kondratenko and this is my final project for OWOX PHP School</i></footer>
         </blockquote>
     </div>
-
-    <div class="p-3">
+    <div class="topic_tags">
         <h4 class="font-italic">Archives</h4>
-        <ol class="list-unstyled mb-0">
-            <li><a href="#">March 2014</a></li>
-            <li><a href="#">February 2014</a></li>
-            <li><a href="#">January 2014</a></li>
-            <li><a href="#">December 2013</a></li>
-            <li><a href="#">November 2013</a></li>
-            <li><a href="#">October 2013</a></li>
-            <li><a href="#">September 2013</a></li>
-            <li><a href="#">August 2013</a></li>
-            <li><a href="#">July 2013</a></li>
-            <li><a href="#">June 2013</a></li>
-            <li><a href="#">May 2013</a></li>
-            <li><a href="#">April 2013</a></li>
+        <ol class="list-unstyled">
+            <?php foreach ($aggregation as $item) : ?>
+                <li><span class="seo-item text-primary"><?= "{$topics[$item['topic_id']]->title} ({$item['count_in']})"; ?></span></li>
+            <?php endforeach; ?>
         </ol>
     </div>
-
-    <div class="p-3">
-        <h4 class="font-italic">Elsewhere</h4>
+    <div class="authors-tags">
+        <h4 class="font-italic">Authors</h4>
         <ol class="list-unstyled">
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
+            <?php foreach ($seo_authors as $seo_author) : ?>
+                <li><span class="seo-item text-primary"><?= $seo_author->name; ?></span></li>
+            <?php endforeach; ?>
         </ol>
+        <div class="gradient-bg"></div>
+    </div>
+    <div class="articles-tags">
+        <h4 class="font-italic">Articles</h4>
+        <ol class="list-unstyled">
+            <?php foreach ($seo_articles as $seo_article) : ?>
+                <li><span class="seo-item text-primary"><?= $seo_article->title; ?></span></li>
+            <?php endforeach; ?>
+        </ol>
+        <div class="gradient-bg"></div>
     </div>
 <?php $view['slots']->stop() ?>
 

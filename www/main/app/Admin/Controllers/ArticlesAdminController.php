@@ -4,6 +4,7 @@ namespace App\Admin\Controllers;
 
 use App\Frontend\Models\Article;
 use App\Frontend\Models\Author;
+use App\Frontend\Models\Image;
 use App\Frontend\Models\Topic;
 use App\Frontend\Services\ArticleUpdatedProducer;
 use Core\Http\AbstractController;
@@ -41,7 +42,7 @@ class ArticlesAdminController extends AbstractController
         ]);
     }
 
-    public function store(Request $request, Article $article, ArticleUpdatedProducer $service, $id = null)
+    public function store(Request $request, Article $article, Image $image, ArticleUpdatedProducer $service, $id = null)
     {
         $inputs = $request->request->all();
         $rules = [
@@ -68,6 +69,13 @@ class ArticlesAdminController extends AbstractController
 
         if (! $article->save()) {
             throw new QueryException("Model wasn\'t saved.");
+        }
+
+        if (! $id) {
+            $image->article_id = $article->id;
+            $image->filename = '';
+
+            $image->save();
         }
 
         if ($article->resetVisited()) {

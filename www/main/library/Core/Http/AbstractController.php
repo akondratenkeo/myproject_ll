@@ -31,7 +31,9 @@ abstract class AbstractController
      */
     public function __construct(Container $container, Validator $validator)
     {
-        session_start();
+        if (2 !== session_status()) {
+            session_start();
+        }
 
         $this->container = $container;
         $this->validator = $validator;
@@ -58,7 +60,9 @@ abstract class AbstractController
         $validation = $this->validator->validate($inputs, $rules);
 
         if ($validation->fails()) {
-            session_start();
+            if (2 !== session_status()) {
+                session_start();
+            }
 
             $_SESSION['_errors'] = $validation->errors();
             unset($validation);

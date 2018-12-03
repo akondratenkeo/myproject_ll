@@ -10,4 +10,11 @@ class Author extends Model
     {
         return $this->count();
     }
+
+    public function getAuthorsList()
+    {
+        return $this->select('name')
+            ->orderBy('name')
+            ->get();
+    }
 }
