@@ -124,3 +124,4 @@
 2018-12-03 10:19:29,213 INFO spawned: 'update-top-worker_00' with pid 55
 2018-12-03 10:19:30,402 INFO success: initial-sync-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2018-12-03 10:19:30,402 INFO success: update-top-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-12-03 11:19:46,937 INFO exited: initial-sync-worker_00 (exit status 0; expected)
