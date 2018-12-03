@@ -17,7 +17,25 @@ class ArticlesController extends AbstractController
         $articles = $articleTop->getTopVisited($inputs['topic_id'])->toArray();
 
         return json_encode([
-            'articles' => $articles
+            'status' => 'OK',
+            'data' => [
+                [
+                    'id' => 801,
+                    'title' => 'Lorem ipsum dolor sit amet, consectetur.',
+                    'topic_id' => 15,
+                    'visited' => 8,
+                ], [
+                    'id' => 809,
+                    'title' => 'Lorem ipsum dolor sit amet, consectetur.',
+                    'topic_id' => 15,
+                    'visited' => 6
+                ], [
+                    'id' => 544,
+                    'title' => 'Lorem ipsum dolor sit amet, consectetur.',
+                    'topic_id' => 15,
+                    'visited' => 5
+                ]
+            ]
         ]);
     }
 }

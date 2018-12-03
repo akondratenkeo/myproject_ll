@@ -9,14 +9,4 @@ Vue.use(VueBus);
 /* --------- */
 const app = new Vue({
     el: '#app',
-
-    mounted() {
-        console.log('Vue application booted...');
-    },
-
-    data() {
-        return {
-            //
-        };
-    }
 });

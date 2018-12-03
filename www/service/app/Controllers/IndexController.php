@@ -10,7 +10,7 @@ class IndexController extends AbstractController
 {
     public function index(RedisBroadcaster $broadcaster)
     {
-        $broadcaster->broadcast(['test'], 'zzz', ['a' => 100]);
+        $broadcaster->broadcast(['article-top-801'], 'visited-changed', ['a' => 100]);
 
         return $this->view("home.html.php");
     }

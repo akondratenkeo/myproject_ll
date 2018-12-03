@@ -33,8 +33,8 @@ class Kernel implements HttpKernelInterface
         \Core\Base\Bootstrap\RegisterDatabase::class,
         \Core\Base\Bootstrap\RegisterRedis::class,
         \Core\Base\Bootstrap\RegisterView::class,
+        \Core\Base\Bootstrap\RegisterQueueConnection::class,
         \Core\Base\Bootstrap\RegisterBroadcaster::class,
-
     ];
 
     /**

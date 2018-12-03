@@ -15,7 +15,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 // if (token) {
 //     window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 // } else {
-//     console.error('CSRF token not found');
+//     console.error('CSRF token not found.');
 // }
 
 

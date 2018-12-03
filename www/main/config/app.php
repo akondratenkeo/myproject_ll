@@ -62,15 +62,22 @@ return [
     ],
 
     'redis' => [
-        'client' => 'predis',
+        'scheme' => env('REDIS_SCHEME', 'tcp'),
 
         'host' => env('REDIS_HOST', '127.0.0.1'),
 
-        'password' => env('REDIS_PASSWORD', null),
-
         'port' => env('REDIS_PORT', 6379),
 
-        'database' => 0,
+        'password' => env('REDIS_PASSWORD', null),
     ],
 
+    'rebbitmq' => [
+        'host' => env('REBBITMQ_HOST', '127.0.0.1'),
+
+        'port' => env('REBBITMQ_PORT', 5672),
+
+        'user' => env('REBBITMQ_USER', 'guest'),
+
+        'password' => env('REBBITMQ_PASSWORD', 'guest'),
+    ],
 ];

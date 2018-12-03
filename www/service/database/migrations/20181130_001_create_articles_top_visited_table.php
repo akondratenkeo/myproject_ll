@@ -3,7 +3,7 @@
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Core\Database\Migration;
 
-class CreateTopicsTable extends Migration
+class CreateArticlesTopVisitedTable extends Migration
 {
     public function up()
     {

@@ -13,6 +13,8 @@ services:
     working_dir: /var/www
     volumes:
       - ./www/main:/var/www
+    depends_on:
+      - main-php-fpm
     ports:
       - "80:80"
 
@@ -22,6 +24,8 @@ services:
     working_dir: /var/www
     volumes:
       - ./www/main:/var/www
+    depends_on:
+      - shared-rebbitmq
 
   service-mysql:
     build: docker/service-mysql
@@ -35,6 +39,8 @@ services:
     working_dir: /var/www
     volumes:
       - ./www/service:/var/www
+    depends_on:
+      - service-php-fpm
     ports:
       - "8080:80"
 

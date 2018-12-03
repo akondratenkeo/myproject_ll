@@ -50,6 +50,9 @@
         "set-down": [
             "php bin/console app:set-down",
             "rm -rf /var/www/public/images/storage/*"
+        ],
+        "run-sync": [
+            "php bin/console app:run-sync"
         ]
     }
 }

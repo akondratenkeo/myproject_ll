@@ -1,7 +1,5 @@
 <?php $view->extend('_layout.html.php') ?>
 
-<?php $view['slots']->set('title', 'Home Page') ?>
+<?php $view['slots']->set('title', 'service.myproject.ll') ?>
 
-<div class="home-page">
-    <p>Home page</p>
-</div>
+<span>service.myproject.ll</span>

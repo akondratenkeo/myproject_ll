@@ -38,11 +38,5 @@ class SetUpCommand extends Command
         $migrator->run();
 
         $output->writeln('Migrated successfully.');
-
-        $seeder = $this->container->make(\DatabaseSeeder::class);
-        $seeder->setContainer($this->container);
-        $seeder->__invoke();
-
-        $output->writeln('Seeded successfully.');
     }
 }

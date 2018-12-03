@@ -3,15 +3,14 @@
 namespace App\Frontend\Controllers;
 
 use App\Frontend\Models\Article;
-use App\Frontend\Models\User;
-use App\Frontend\Services\SendToRabbit;
+use App\Frontend\Services\ArticleUpdatedProducer;
 use Core\Http\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class ArticlesController extends AbstractController
 {
-    public function show(Article $article, SendToRabbit $service, $id)
+    public function show(Article $article, ArticleUpdatedProducer $service, $id)
     {
         $article = $article->getArticlesData($id);
 
@@ -19,9 +18,9 @@ class ArticlesController extends AbstractController
             throw new NotFoundHttpException('Model not found.');
         }
 
-        $article->incrementVisited();
-
-        $service->send();
+        if ($article->incrementVisited()) {
+            $service->publish($article->toArray(), 'article.updated');
+        }
 
         return $this->view('frontend/articles/show.html.php', [
             'article' => $article

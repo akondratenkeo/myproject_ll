@@ -13,11 +13,13 @@ $container->bootstrapWith([
     \Core\Base\Bootstrap\HandleExceptions::class,
     \Core\Base\Bootstrap\RegisterLogger::class,
     \Core\Base\Bootstrap\RegisterDatabase::class,
+    \Core\Base\Bootstrap\RegisterQueueConnection::class,
 ]);
 
 $console = new Symfony\Component\Console\Application();
 
 $console->add(new \App\Frontend\Commands\SetUpCommand($container));
 $console->add(new \App\Frontend\Commands\SetDownCommand($container));
+$console->add(new \App\Frontend\Commands\RunSyncCommand($container));
 
 $console->run();
